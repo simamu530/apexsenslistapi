@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\Apexprolistmodel;
+use App\Models\Apexprolist;
 
 class ApexprolistTableSeeder extends Seeder
 {
@@ -30,7 +30,7 @@ class ApexprolistTableSeeder extends Seeder
             'キーボード' => 'Realforce',
             'ヘッドセット' => 'IEpro40',
         ];
-        $apexprolistdetail = new Apexprolistmodel;
+        $apexprolistdetail = new Apexprolist;
         $apexprolistdetail ->fill($param)->save();
         $param = [
             'チーム' => 'smm2',
@@ -48,7 +48,7 @@ class ApexprolistTableSeeder extends Seeder
             'キーボード' => 'Realforce',
             'ヘッドセット' => 'IEpro40',
         ];
-        $apexprolistdetail = new Apexprolistmodel;
+        $apexprolistdetail = new Apexprolist;
         $apexprolistdetail->fill($param)->save();
         $param = [
             'チーム' => 'smm3',
@@ -66,7 +66,7 @@ class ApexprolistTableSeeder extends Seeder
             'キーボード' => 'Realforce',
             'ヘッドセット' => 'IEpro40',
         ];
-        $apexprolistdetail = new Apexprolistmodel;
+        $apexprolistdetail = new Apexprolist;
         $apexprolistdetail->fill($param)->save();
     }
 }

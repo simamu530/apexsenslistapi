@@ -2,7 +2,16 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ApexprolistsController;
 
+Route::apiResource('/v1/apexprolist', ApexprolistsController::class);
+
+//apiHelloテスト
+Route::get('/hello', function() {
+    return response()->json([
+        'message' => 'Hello'
+    ], 200);
+});
 /*
 |--------------------------------------------------------------------------
 | API Routes
