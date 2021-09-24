@@ -12,19 +12,19 @@ class Apexprolist extends Model
     protected $guarded = array('id');
 
     public static $rules = array(
-        'チーム' => 'required',
-        '名前' => 'required',
-        'DPI' => 'required',
-        'マウス感度' => 'required',
-        '倍率感度' => 'required',
-        'Hz' => 'required',
-        '視野角' => 'required',
-        'マウス' => 'required',
-        'モニター' => 'required',
-        'GPU' => 'required',
-        '解像度' => 'required',
-        'マウスパッド' => 'required',
-        'キーボード' => 'required',
-        'ヘッドセット' => 'required',
+        'team' => 'required',
+        'name' => 'required',
+        'dpi' => 'required',
+        'mousesens' => 'required',
+        'multisens' => 'required',
+        'hz' => 'required',
+        'fov' => 'required',
+        'mouse' => 'required',
+        'monitor' => 'required',
+        'gpu' => 'required',
+        'resolution' => 'required',
+        'mousepad' => 'required',
+        'keyboard' => 'required',
+        'headset' => 'required',
     );
 }

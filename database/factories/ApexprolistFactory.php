@@ -23,8 +23,20 @@ class ApexprolistFactory extends Factory
     public function definition()
     {
         return [
-            'message' => Str::random(10),
-            'url' => $this->faker->url,
+            'team' => str::random(10),
+            'name' => 'simamu1',
+            'dpi' => 800,
+            'mousesens' => 1.6,
+            'multisens' => 1.6,
+            'hz' => 1000,
+            'fov' => 104,
+            'mouse' => 'Gpro',
+            'monitor' => 'Qnix',
+            'gpu' => '1080',
+            'resolution' => '1080×1080',
+            'mousepad' => 'G640',
+            'keyboard' => 'Realforce',
+            'headset' => 'IEpro40',
             //
         ];
     }

@@ -21,8 +21,20 @@ class ApexprolistControllerTest extends TestCase
         $response = $this->get('/api/v1/apexprolist'); 
         $response->assertStatus(200);
         $response->assertJsonFragment([
-            'message' => $item->message,
-            'url' => $item->url
+            'team' => $item->team,
+            'name' => $item->name,
+            'dpi' => $item->dpi,
+            'mousesens' => $item->mousesens,
+            'multisens' => $item->multisens,
+            'hz' => $item->hz,
+            'fov' => $item->fov,
+            'mouse' => $item->mouse,
+            'monitor' => $item->monitor,
+            'gpu' => $item->gpu,
+            'resolution' => $item->resolution,
+            'mousepad' => $item->mousepad,
+            'keyboard' => $item->keyboard,
+            'headset' => $item->headset,
         ]);
     }
 }
