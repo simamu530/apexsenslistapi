@@ -10,6 +10,10 @@ class Apexprolist extends Model
     use HasFactory;
 
     protected $guarded = array('id');
+    protected $casts = [
+        'mousesens' => 'double',
+        'multisens' => 'double',
+    ];
 
     public static $rules = array(
         'team' => 'required',

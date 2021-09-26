@@ -45,7 +45,7 @@ class ApexprolistsController extends Controller
         $item = Apexprolist::find($apexprolist);
         if ($item) {
             return response()->json([
-                'data' => $item//
+                'data' => $item
             ], 200);
         } else {
             return response()->json([
@@ -64,8 +64,20 @@ class ApexprolistsController extends Controller
     public function update(Request $request, Apexprolist $apexprolist)
     {
         $update = [
-            'message' => $request->message,
-            'url' => $request->url
+            'team' => $request->team,
+            'name' => $request->name,
+            'dpi' => $request->dpi,
+            'mousesens' => $request->mousesens,
+            'multisens' => $request->multisens,
+            'hz' => $request->hz,
+            'fov' => $request->fov,
+            'mouse' => $request->mouse,
+            'monitor' => $request->monitor,
+            'gpu' => $request->gpu,
+            'resolution' => $request->resolution,
+            'mousepad' => $request->mousepad,
+            'keyboard' => $request->keyboard,
+            'headset' => $request->headset
         ];//
         $item = Apexprolist::where('id', $apexprolist->id)->update($update);
         if ($item) {

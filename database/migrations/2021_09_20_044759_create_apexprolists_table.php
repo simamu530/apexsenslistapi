@@ -18,8 +18,8 @@ class CreateApexprolistsTable extends Migration
             $table->string('team');
             $table->string('name');
             $table->integer('dpi');
-            $table->decimal('mousesens', $precision = 4, $scale = 2);
-            $table->decimal('multisens', $precision = 4, $scale = 2);
+            $table->double('mousesens');
+            $table->double('multisens');
             $table->integer('hz')->default(0);
             $table->integer('fov')->default(0);
             $table->string('mouse')->default(0);
