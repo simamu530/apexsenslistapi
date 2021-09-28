@@ -82,5 +82,36 @@ class ApexprolistControllerTest extends TestCase
             'headset' => $item->headset,
         ]);
     }
+    public function test_update_apexprolist()
+    {
+        $item = Apexprolist::factory()->create();
+        $data = [
+            'team' => 'updateteam',
+            'name' => 'simamu1',
+            'dpi' => 800,
+            'mousesens' => 1.60,
+            'multisens' => 1.60,
+            'hz' => 1000,
+            'fov' => 104,
+            'mouse' => 'Gpro',
+            'monitor' => 'Qnix',
+            'gpu' => '1080',
+            'resolution' => '1080×1080',
+            'mousepad' => 'G640',
+            'keyboard' => 'Realforce',
+            'headset' => 'IEpro40',
+        ];
+        $response = $this->put('/api/v1/apexprolist/' . $item->id, $data);
+        $response->assertStatus(200);
+        $this->assertDatabaseHas('apexprolists', $data);
+    }
+    public function test_destroy_apexprolist()
+    {
+        $item = Apexprolist::factory()->create();
+        $response = $this->delete('/api/v1/apexprolist/' . $item->id);
+        $response->assertStatus(200);
+        $this->assertDeleted($item);
+    }
+
 
 }
