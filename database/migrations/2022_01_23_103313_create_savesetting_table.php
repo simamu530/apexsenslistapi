@@ -18,8 +18,8 @@ class CreateSavesettingTable extends Migration
             $table->string('game_title');
             $table->string('mouse')->default(0);
             $table->integer('dpi');
-            $table->double('mousesens');
-            $table->double('multisens');
+            $table->double('mouse_sens');
+            $table->double('multi_sens');
             $table->integer('hz')->default(0);
             $table->string('mousepad')->default(0);
             $table->string('keyboard')->default(0);
