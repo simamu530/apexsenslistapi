@@ -11,8 +11,8 @@ class savesetting extends Model
 
     protected $guarded = array('id');
     protected $casts = [
-        'mousesens' => 'double',
-        'multisens' => 'double',
+        'mouse_sens' => 'double',
+        'multi_sens' => 'double',
     ];
 
     public static $rules = array(
@@ -22,7 +22,7 @@ class savesetting extends Model
         'mouse_sens' => 'required',
         'multi_sens' => 'required',
         'hz' => 'required',
-        'mousepad' => 'required',
+        'mouse_pad' => 'required',
         'keyboard' => 'required',
         'fov' => 'required',
         'resolution' => 'required',

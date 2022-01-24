@@ -64,20 +64,17 @@ class SavesettingController extends Controller
     public function update(Request $request, savesetting $savesetting)
     {
         $update = [
-            'team' => $request->team,
-            'name' => $request->name,
+            'game_title' => $request->team,
+            'mouse' => $request->name,
             'dpi' => $request->dpi,
-            'mousesens' => $request->mousesens,
-            'multisens' => $request->multisens,
+            'mouse_sens' => $request->mousesens,
+            'multi_sens' => $request->multisens,
             'hz' => $request->hz,
+            'mouse_pad' => $request->mousepad,
+            'keyboard' => $request->keyboard,
             'fov' => $request->fov,
             'mouse' => $request->mouse,
-            'monitor' => $request->monitor,
-            'gpu' => $request->gpu,
             'resolution' => $request->resolution,
-            'mousepad' => $request->mousepad,
-            'keyboard' => $request->keyboard,
-            'headset' => $request->headset
         ]; //
         $item = savesetting::where('id', $savesetting->id)->update($update);
         if ($item) {
