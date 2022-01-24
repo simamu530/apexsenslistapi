@@ -14,6 +14,12 @@ Route::get('/hello', function() {
         'message' => 'Hello'
     ], 200);
 });
+
+Route::get('/v1/savesetting', function () {
+    return response()->json([
+        'message' => 'Hello'
+    ], 200);
+});
 /*
 |--------------------------------------------------------------------------
 | API Routes
