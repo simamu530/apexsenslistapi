@@ -67,13 +67,12 @@ class SavesettingController extends Controller
             'game_title' => $request->team,
             'mouse' => $request->name,
             'dpi' => $request->dpi,
-            'mouse_sens' => $request->mousesens,
-            'multi_sens' => $request->multisens,
+            'mouse_sens' => $request->mouse_sens,
+            'multi_sens' => $request->multi_sens,
             'hz' => $request->hz,
-            'mouse_pad' => $request->mousepad,
+            'mouse_pad' => $request->mouse_pad,
             'keyboard' => $request->keyboard,
             'fov' => $request->fov,
-            'mouse' => $request->mouse,
             'resolution' => $request->resolution,
         ]; //
         $item = savesetting::where('id', $savesetting->id)->update($update);
