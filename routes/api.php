@@ -3,8 +3,10 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ApexprolistsController;
+use App\Http\Controllers\SavesettingController;
 
 Route::apiResource('/v1/apexprolist', ApexprolistsController::class);
+Route::apiResource('/v1/savesetting', SavesettingController::class);
 
 //apiHelloテスト
 Route::get('/hello', function() {
