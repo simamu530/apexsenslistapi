@@ -9,17 +9,13 @@ Route::apiResource('/v1/apexprolist', ApexprolistsController::class);
 Route::apiResource('/v1/savesetting', SavesettingController::class);
 
 //apiHelloテスト
-Route::get('/hello', function() {
+Route::get('/hello', function () {
     return response()->json([
         'message' => 'Hello'
     ], 200);
 });
 
-Route::get('/v1/savesetting', function () {
-    return response()->json([
-        'message' => 'Hello'
-    ], 200);
-});
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
