@@ -25,6 +25,6 @@ class savesetting extends Model
         'mouse_pad' => 'required',
         'keyboard' => 'required',
         'fov' => 'required',
-        'resolution' => 'required',
+        'res' => 'required',
     );
 }

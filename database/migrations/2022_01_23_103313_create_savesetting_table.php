@@ -21,8 +21,9 @@ class CreateSavesettingTable extends Migration
             $table->double('mouse_sens');
             $table->double('multi_sens');
             $table->integer('hz')->default(0);
-            $table->string('mousepad')->default(0);
+            $table->string('mouse_pad')->default(0);
             $table->string('keyboard')->default(0);
+            $table->string('res')->default(0);
             $table->integer('fov')->default(0);
             $table->timestamp('created_at')->useCurrent()->nullable();
             $table->timestamp('updated_at')->useCurrent()->nullable();

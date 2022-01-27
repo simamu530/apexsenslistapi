@@ -73,7 +73,7 @@ class SavesettingController extends Controller
             'mouse_pad' => $request->mouse_pad,
             'keyboard' => $request->keyboard,
             'fov' => $request->fov,
-            'resolution' => $request->resolution,
+            'res' => $request->res,
         ]; //
         $item = savesetting::where('id', $savesetting->id)->update($update);
         if ($item) {
