@@ -6,9 +6,8 @@
 フロントエンドは[こちら](https://github.com/simamu530/frontend)になります。
 
 # 環境 Requirements
-- Vue 2.6.14  
-- NuxtJS 2.15.8  
-- Vuetify 2.6.14  
+- Laravel 8.61.0  
+- Firebase 10.1.2  
 
 # 文責 Author
 githubID:simamu530
