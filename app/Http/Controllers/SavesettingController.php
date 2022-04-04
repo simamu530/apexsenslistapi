@@ -32,6 +32,19 @@ class SavesettingController extends Controller
         return response()->json([
             'data' => $item
         ], 201);
+        $validate_rule = [
+            'game_title' => 'required',
+            'mouse' => 'required',
+            'dpi' => 'required',
+            'mouse_sens' => 'required',
+            'multi_sens' => 'required',
+            'hz' => 'required',
+            'mouse_pad' => 'required',
+            'keyboard' => 'required',
+            'fov' => 'required',
+            'res' => 'required',
+        ];
+        $this->validate($request, $validate_rule);
     }
 
     /**

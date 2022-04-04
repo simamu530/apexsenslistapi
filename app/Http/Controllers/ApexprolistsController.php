@@ -32,6 +32,23 @@ class ApexprolistsController extends Controller
         return response()->json([
             'data' => $item
         ], 201);
+        $validate_rule = [
+            'team' => 'required',
+            'name' => 'required',
+            'dpi' => 'required',
+            'mousesens' => 'required',
+            'multisens' => 'required',
+            'hz' => 'required',
+            'fov' => 'required',
+            'mouse' => 'required',
+            'monitor' => 'required',
+            'gpu' => 'required',
+            'resolution' => 'required',
+            'mousepad' => 'required',
+            'keyboard' => 'required',
+            'headset' => 'required',
+        ];
+        $this->validate($request, $validate_rule);
     }
 
     /**
