@@ -28,10 +28,6 @@ class ApexprolistsController extends Controller
      */
     public function store(Request $request)
     {
-        $item = Apexprolist::create($request->all());//新規作成
-        return response()->json([
-            'data' => $item
-        ], 201);
         $validate_rule = [
             'team' => 'required',
             'name' => 'required',
@@ -49,6 +45,11 @@ class ApexprolistsController extends Controller
             'headset' => 'required',
         ];
         $this->validate($request, $validate_rule);
+        $item = Apexprolist::create($request->all());//新規作成
+        return response()->json([
+            'data' => $item
+        ], 201);
+
     }
 
     /**
