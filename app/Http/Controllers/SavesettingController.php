@@ -28,10 +28,6 @@ class SavesettingController extends Controller
      */
     public function store(Request $request)
     {
-        $item = savesetting::create($request->all()); //新規作成
-        return response()->json([
-            'data' => $item
-        ], 201);
         $validate_rule = [
             'game_title' => 'required',
             'mouse' => 'required',
@@ -45,6 +41,10 @@ class SavesettingController extends Controller
             'res' => 'required',
         ];
         $this->validate($request, $validate_rule);
+        $item = savesetting::create($request->all()); //新規作成
+        return response()->json([
+            'data' => $item
+        ], 201);
     }
 
     /**
