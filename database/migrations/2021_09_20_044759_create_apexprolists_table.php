@@ -14,7 +14,7 @@ class CreateApexprolistsTable extends Migration
     public function up()
     {
         Schema::create('apexprolists', function (Blueprint $table) {
-            $table->id();
+            $table->string('id');
             $table->string('team');
             $table->string('name');
             $table->integer('dpi');

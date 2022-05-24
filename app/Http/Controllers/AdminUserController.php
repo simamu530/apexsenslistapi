@@ -11,6 +11,7 @@ class AdminUserController extends Controller
     public function postRegister(Request $data)
     {
         User::create([
+            'id' => $data['id'], // idを更新することができるようにidを追加
             'admin' => true,
             'name' => $data['name'],
             'email' => $data['email'],
@@ -19,5 +20,18 @@ class AdminUserController extends Controller
         return response()->json([
             'data' => 'success'
         ], 200);
+    }
+    public function show($admin)
+    {
+        $item = User::find($admin);
+        if ($item) {
+            return response()->json([
+                'data' => $item
+            ], 200);
+        } else {
+            return response()->json([
+                'message' => 'Not found',
+            ], 404);
+        }
     }
 }

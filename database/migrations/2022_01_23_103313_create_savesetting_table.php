@@ -14,7 +14,7 @@ class CreateSavesettingTable extends Migration
     public function up()
     {
         Schema::create('savesettings', function (Blueprint $table) {
-            $table->id();
+            $table->string('id');
             $table->string('game_title');
             $table->string('mouse')->default(0);
             $table->integer('dpi');
