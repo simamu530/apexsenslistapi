@@ -14,8 +14,8 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->boolean('admin')->default(false);//管理者フラグ追加
-            $table->id();
+            $table->boolean('admin')->default(false);
+            $table->string('id');
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
