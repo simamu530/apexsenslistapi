@@ -12,7 +12,7 @@ class AdminUserController extends Controller
     {
         User::create([
             'id' => $data['id'], // idを更新することができるようにidを追加
-            'admin' => true,
+            'admin' => false,
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
