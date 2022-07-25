@@ -10,6 +10,7 @@ class Apexprolist extends Model
     use HasFactory;
 
     protected $guarded = array('id');
+    
     protected $casts = [
         'mousesens' => 'double',
         'multisens' => 'double',
@@ -31,4 +32,7 @@ class Apexprolist extends Model
         'keyboard' => 'required',
         'headset' => 'required',
     );
+    protected $keyType = 'string';
+    public $incrementing = false;
 }
+
