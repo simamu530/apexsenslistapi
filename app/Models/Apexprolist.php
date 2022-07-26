@@ -9,7 +9,7 @@ class Apexprolist extends Model
 {
     use HasFactory;
 
-    protected $guarded = array('id');
+    protected $fillable = array('id');
     
     protected $casts = [
         'mousesens' => 'double',
