@@ -16,7 +16,7 @@ class Apexprolist extends Model
         'multisens' => 'double',
     ];
 
-    public static $rules = array(
+    public static $fillable = array(
         'team' => 'required',
         'name' => 'required',
         'dpi' => 'required',
