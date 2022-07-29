@@ -9,14 +9,30 @@ class Apexprolist extends Model
 {
     use HasFactory;
 
-    protected $fillable = array('id');
-    
+    protected $fillable = array(
+        'id',
+        'team',
+        'name',
+        'dpi',
+        'mousesens',
+        'multisens',
+        'hz',
+        'fov',
+        'mouse',
+        'monitor',
+        'gpu',
+        'resolution',
+        'mousepad',
+        'keyboard',
+        'headset'
+    );
+
     protected $casts = [
         'mousesens' => 'double',
         'multisens' => 'double',
     ];
 
-    public static $fillable = array(
+    public static $rules = array(
         'team' => 'required',
         'name' => 'required',
         'dpi' => 'required',
@@ -35,4 +51,3 @@ class Apexprolist extends Model
     protected $keyType = 'string';
     public $incrementing = false;
 }
-
