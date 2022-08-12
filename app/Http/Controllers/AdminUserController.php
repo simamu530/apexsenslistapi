@@ -23,7 +23,7 @@ class AdminUserController extends Controller
     }
     public function show($admin)
     {
-        $item = User::find($admin);
+        $item = User::where('id',$admin)->first();
         if ($item) {
             return response()->json([
                 'data' => $item
