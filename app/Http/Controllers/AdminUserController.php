@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Hash;
 
 class AdminUserController extends Controller
 {
-    public function postRegister(Request $data)
+    public function store(Request $data)
     {
         User::create([
             'id' => $data['id'], // idを更新することができるようにidを追加

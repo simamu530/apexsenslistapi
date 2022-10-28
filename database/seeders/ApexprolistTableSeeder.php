@@ -15,8 +15,8 @@ class ApexprolistTableSeeder extends Seeder
     public function run()
     {
         $param = [
-            'team' => 'smm1',
-            'name' => 'simamu1',
+            'team' => 'team1',
+            'name' => 'name1',
             'dpi' => 800,
             'mousesens' => 1.60,
             'multisens' => 1.60,
@@ -33,8 +33,8 @@ class ApexprolistTableSeeder extends Seeder
         $apexprolistdetail = new Apexprolist;
         $apexprolistdetail ->fill($param)->save();
         $param = [
-            'team' => 'smm2',
-            'name' => 'simamu2',
+            'team' => 'team2',
+            'name' => 'name2',
             'dpi' => 800,
             'mousesens' => 1.60,
             'multisens' => 1.60,
@@ -51,8 +51,8 @@ class ApexprolistTableSeeder extends Seeder
         $apexprolistdetail = new Apexprolist;
         $apexprolistdetail->fill($param)->save();
         $param = [
-            'team' => 'smm3',
-            'name' => 'simamu3',
+            'team' => 'team3',
+            'name' => 'name3',
             'dpi' => 800,
             'mousesens' => 1.60,
             'multisens' => 1.60,
